@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 const pedidosController = require("../controllers/pedidosController");
 
-router.post("/pedidos/finalizar", pedidosController.finalizarCompra);
-router.get("/pedidos/:id", pedidosController.consultarPedido);
+router.post("/pedidos", pedidosController.finalizarPedido);
+router.get("/pedidos/:id/status", pedidosController.verificarStatusPedido);
 
 module.exports = router;
